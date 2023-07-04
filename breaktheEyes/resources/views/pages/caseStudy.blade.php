@@ -1,27 +1,6 @@
 @extends('layouts.site')
 @section('page_title', 'Projects')
 @section('content')
-
-<div class="grid md:grid-cols-3 gap-3">
-
-{{--@foreach ($entries as $entry)
-    <a href="{{ $entry->url() }}" class="p-2 rounded shadow-sm">
-        <img src="{{ $entry->featured_image }}" class="w-full" alt="Featured Image">
-        <h2>{{ $entry->get('title') }}</h2>
-        <div>{{ $entry->date()->format('Y-m-d') }}</div>
-        <p>{{ $entry->get('case_description') }}</p>
-        
-        @foreach ($entry->get('service_list') as $service)
-            <p>{{ $service }}</p>
-        @endforeach
-        
-        {{-- Add other entry fields as needed
-    </a>
-@endforeach  --}}
-
-    </div>
-
-
 <section class="py-5" style="background-image: url('{{asset('assets/static/site-images/our-work-banner-image.jpg')}}'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
     <div class="container-xl">
         <div class="row">
@@ -53,14 +32,7 @@
                   </div>
                 </div>
               </div>
-              @endforeach
-
-            
-              
-             
-              
-              
-              
+              @endforeach          
         </div>
     </div>
  </section>

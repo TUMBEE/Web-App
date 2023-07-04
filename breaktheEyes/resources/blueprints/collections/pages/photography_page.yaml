@@ -12,6 +12,12 @@ tabs:
               required: true
               validate:
                 - required
+              instructions_position: above
+              listable: true
+              visibility: visible
+              input_type: text
+              antlers: true
+              hide_display: false
           -
             handle: romeo
             field:

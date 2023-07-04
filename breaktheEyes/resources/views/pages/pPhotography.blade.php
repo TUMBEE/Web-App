@@ -1,5 +1,5 @@
 @extends('layouts.site')
-@section('page_title', $page->title)
+@section('page_title', $title)
 @section('content')
 @push('styles')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -26,7 +26,7 @@
           <h1 class="page-title">Portrait Photography</h1>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb text-white">
-              <li class="breadcrumb-item"><a href="/#services" class="decoration-no text-white">Services</a></li>
+              <li class="breadcrumb-item"><a href="{{route('services')}}" class="decoration-no text-white">Services</a></li>
               <li class="breadcrumb-item text-white"><a class="decoration-no text-white">Portrait Photography</a></li>
             </ol>
           </nav>
@@ -133,12 +133,14 @@
         
         <div class="swiper mySwiper mt-5">
             <div class="swiper-wrapper">
-                @foreach($page->sliders as $slider)
+                @foreach($sliders as $slider)
                     <div class="swiper-slide">
-                        <img src="{{ $slider['url'] }}" class="img-fluid" loading="lazy">
+                        <img src="{{ asset('assets') . '/' . $slider }}" class="img-fluid" loading="lazy">
                     </div>
                 @endforeach
             </div>
+
+            
             
           <div class="swiper-scrollbar"></div>
 
@@ -153,7 +155,7 @@
         <hr class="_btheblackline">
         <div class="row py-5">
             <div class="col-lg-3 col-md-3 col-sm-6">
-                <div data-aos="zoom-out-down" class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="300" class="card b-0 b-10 mb-3">
                   <img src="{{asset('assets/static/site-images/individuak-portraits.jpg')}}" class="card-img img-fluid" alt="Individual Portrait">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h5 class="card-title text-white">Individual Portraits</h5>
@@ -161,7 +163,7 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6">
-                <div data-aos="zoom-out-down"  class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="400"  class="card b-0 b-10 mb-3">
                   <img src="{{asset('assets/static/site-images/familiy-portraits.jpg')}}" class="card-img img-fluid" alt="Family Portrait">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h5 class="card-title text-white">Family Portraits</h5>
@@ -169,7 +171,7 @@
                 </div>
               </div>
             <div class="col-md-3">
-                <div data-aos="zoom-out-down"  class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="500"  class="card b-0 b-10 mb-3">
                     <img src="{{asset('assets/static/site-images/couples-portraits.jpg')}}" class="card-img img-fluid" alt="Couples Portraits">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">Couples Portraits</h5>
@@ -177,7 +179,7 @@
                   </div>
             </div>
             <div class="col-md-3">
-                <div data-aos="zoom-out-down" class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="600" class="card b-0 b-10 mb-3">
                     <img src="{{asset('assets/static/site-images/lifestyle-portraits.jpg')}}" class="card-img img-fluid" alt="Lifestyle Portraits">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">Lifestyle Portraits</h5>

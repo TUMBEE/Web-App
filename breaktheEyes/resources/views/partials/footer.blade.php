@@ -5,7 +5,7 @@
           <h4 class="_bthemenutext">Company</h4>
           <ul class="list-unstyled">
             <li><a class="footer-text underline-animation" href="{{route('theTribe')}}">About Break The Eyes</a></li>
-            <li><a class="footer-text underline-animation" href="/#services">Our Services</a></li>
+            <li><a class="footer-text underline-animation" href="{{route('services')}}">Our Services</a></li>
             <li><a class="footer-text underline-animation" href="{{route('theTribe')}}#tribe">The Tribe</a></li>
           </ul>
         </div>

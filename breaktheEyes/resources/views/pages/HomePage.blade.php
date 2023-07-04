@@ -1,6 +1,8 @@
 @extends('layouts.site')
-@section('page_title', $page->title)
+@section('page_title', 'Capturing Moments with Precision and Creativity')
+@section('page_description','Experience the artistry and professionalism of Brek The Eyes, a leading media company. From live broadcasting to fine art and fashion photography, music videos, real estate photography, and event coverage, we specialize in capturing memorable moments with precision and creativity.')
 @section('content')
+
 <section style="padding-top: 1rem;">
     <div class="container-xl _bthHborder">
         <div class="row">
@@ -14,7 +16,7 @@
             <div class="col-md-4">
                 <div class="">
                   <p>We thrive on capturing extraordinary moments, infusing our work with a touch of madness that sets us apart. Driven by a relentless passion for delivering exceptional results.</p>
-                  <a href="#services" class="btn _btheBttn bttn-pill-black text-center">
+                  <a href="{{route('services')}}" class="btn _btheBttn bttn-pill-black text-center">
                     Our Artistry 
                     <i class="bi bi-arrow-down-right"></i>
                   </a>
@@ -26,7 +28,7 @@
     </div>
  </section>
 
- <section id="services" class="py-4">
+ <section class="py-4">
     <div class="container-xl mt-3">
         <div data-aos="zoom-in-up" class="row mb-4 row align-items-end no-gutters">
             <div class="col-md-5 _btheservicecard">
@@ -35,7 +37,7 @@
                       <img src="{{asset('assets/static/site-images/live-recording-banner.jpg')}}" class="img-fluid" alt="Live Recording" loading="lazy">
                       <div class="card-overlay">
                         <div class="overlay-content">
-                          <span class="text-left _bthecard_text">Live Recording</span>
+                          <span class="text-left _bthecard_text">Live Broadcasting</span>
                           <i class="bi bi-arrow-down-right-circle _bthecard_arrow"></i>
                         </div>
                       </div>
@@ -46,7 +48,7 @@
             <div class="col-md-7">
                 <div class="row">
                     <div data-aos="zoom-in-up" class="col-md-6 _btheservicecard">
-                        <a href="/portrait-photography">
+                        <a href="{{route('p_photography')}}">
                             <div class="card _bthecard" style="position: relative;">
                               <img src="{{asset('assets/static/site-images/portrait-photography-banner.jpg')}}" class="img-fluid" alt="Portrait Photography" loading="lazy">
                               <div class="card-overlay">
@@ -59,7 +61,7 @@
                           </a> 
                     </div>
                     <div data-aos="zoom-in-up" class="col-md-6 _btheservicecard">
-                        <a href="/fine-art-and-fashion">
+                        <a href="{{route('fineArtandfashion')}}">
                             <div class="card _bthecard" style="position: relative;">
                               <img src="{{asset('assets/static/site-images/fine-art-and-fashion.jpg')}}" class="img-fluid" alt="Fine art and fashion">
                               <div class="card-overlay">
@@ -79,7 +81,7 @@
             <div  class="col-md-7">
                 <div class="row">
                     <div class="col-md-6 _btheservicecard">
-                        <a href="/music-video">
+                        <a href="{{route('musicVideo')}}">
                             <div class="card _bthecard" style="position: relative;">
                               <img src="{{asset('assets/static/site-images/music-video.jpg')}}" class="img-fluid">
                               <div class="card-overlay">
@@ -189,13 +191,13 @@
     
     <div class="row mt-5">
         <div data-aos="fade-down" data-aos-duration="1000" class="col-md-6 mb-3">
-            <a href="{{ $page->project_1_link}}">
+            <a href="{{ $project_1_link}}">
                 <div class="card b-0 position-relative _bthecard">
-                  <img src="{{ $page->project_image_1 }}" class="card-img">
+                  <img src="{{ asset('assets/' . $project_image_1) }}" class="card-img">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <div class="text-start">
-                      <h3 class="card-title text-white">{{$page->project_1_title}}</h3>
-                      <p class="card-text text-white _bthe_hidden">{{ $page->project_1_description}}</p>
+                      <h3 class="card-title text-white">{{$project_1_title}}</h3>
+                      <p class="card-text text-white _bthe_hidden">{{ $project_1_description}}</p>
                     </div>
                     <i class="bi bi-arrow-up-right _bthearrowwight position-absolute top-0 end-0 mt-3 me-3 _bthe_hidden"></i>
                   </div>
@@ -204,13 +206,13 @@
         </div>
 
         <div data-aos="fade-down" data-aos-duration="1000" class="col-md-6 mb-3">
-            <a href="{{ $page->project_2_link}}">
+            <a href="{{ $project_2_link}}">
                 <div class="card b-0 position-relative _bthecard">
-                  <img src="{{ $page->project_image_2 }}" class="card-img">
+                  <img src="{{ asset('assets/' . $project_image_2) }}" class="card-img">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <div class="text-start">
-                      <h3 class="card-title text-white">{{$page->project_2_title}}</h3>
-                      <p class="card-text text-white _bthe_hidden">{{ $page->project_2_description }}</p>
+                      <h3 class="card-title text-white">{{$project_2_title}}</h3>
+                      <p class="card-text text-white _bthe_hidden">{{ $project_2_description }}</p>
                     </div>
                     <i class="bi bi-arrow-up-right _bthearrowwight position-absolute top-0 end-0 mt-3 me-3 _bthe_hidden"></i>
                   </div>
@@ -219,13 +221,13 @@
         </div>
 
         <div data-aos="fade-up" data-aos-duration="1000" class="col-md-12 mt-5">
-            <a href="{{$page->project_3_link}}">
+            <a href="{{$project_3_link}}">
                 <div class="card b-0 position-relative _bthecard">
-                  <img src="{{$page->projeect_3_image}}" class="card-img">
+                  <img src="{{ asset('assets/' . $project_3_image) }}" class="card-img">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <div class="text-start">
-                      <h3 class="card-title text-white">{{$page->project_3_title}}</h3>
-                      <p class="card-text text-white _bthe_hidden">{{ $page->project_3_description }}</p>
+                      <h3 class="card-title text-white">{{$project_3_title}}</h3>
+                      <p class="card-text text-white _bthe_hidden">{{ $project_3_description }}</p>
                     </div>
                     <i class="bi bi-arrow-up-right _bthearrowwight position-absolute top-0 end-0 mt-3 me-3 _bthe_hidden"></i>
                   </div>

@@ -14,16 +14,18 @@
                     <a class="nav-link" href="{{route('theTribe')}}">The Tribe</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{route('services')}}" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Our Services
                     </a>
                     <ul class="dropdown-menu bg-white b-0" aria-labelledby="servicesDropdown" style="line-height: inherit">
-                        <li><a class="dropdown-item" href="/live-recording">Live Recording</a></li>
-                        <li><a class="dropdown-item" href="/portrait-photography">Portrait Photography</a></li>
-                        <li><a class="dropdown-item" href="/fine-art-and-fashion">Fine Art & Fashion</a></li>
-                        <li><a class="dropdown-item" href="/music-video">Music Video</a></li>
-                        <li><a class="dropdown-item" href="/real-estate">Real Estate</a></li>
-                        <li><a class="dropdown-item" href="/event-lifestyle">Event & Lifestyle</a></li>
+                        <li><a class="dropdown-item {{ request()->routeIs('liveRecording') ? 'active' : '' }} " href="{{route('liveRecording')}}">Live Recording</a></li>
+                        <li>
+                          <a class="dropdown-item {{ request()->routeIs('p_photography') ? 'active' : '' }}" href="{{ route('p_photography') }}">Portrait Photography</a>
+                      </li>                      
+                        <li><a class="dropdown-item {{ request()->routeIs('fineArtandfashion') ? 'active' : '' }}" href="{{route('fineArtandfashion')}}">Fine Art & Fashion</a></li>
+                        <li><a class="dropdown-item {{ request()->routeIs('musicVideo') ? 'active' : '' }}" href="{{route('musicVideo')}}">Music Video</a></li>
+                        <li><a class="dropdown-item {{ request()->routeIs('realEstate') ? 'active' : '' }}" href="{{route('realEstate')}}">Real Estate</a></li>
+                        <li><a class="dropdown-item {{ request()->routeIs('eventLifestyle') ? 'active' : '' }}" href="{{route('eventLifestyle')}}">Event & Lifestyle</a></li>
                     </ul>
                 </li>
                 
@@ -60,14 +62,14 @@
     <div class="offcanvas-body">
 <ul class="nav flex-column">
     <li class="nav-item mobile-nav">
-        <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="">Home</a>
+        <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="{{route('index')}}">Home</a>
     </li>
     
     <li class="nav-item mobile-nav">
-      <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="">Services</a>
+      <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="{{route('services')}}">Services</a>
   </li>
   <li class="nav-item mobile-nav">
-    <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="">The  Tribe</a>
+    <a class="nav-link px-0 py-2 _bthe_mobile_menu_text  underline-animation" href="{{route('theTribe')}}">The  Tribe</a>
 </li>
 
   <li class="nav-item mobile-nav">

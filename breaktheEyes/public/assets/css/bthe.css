@@ -456,6 +456,10 @@
     ._bthe_form{
       width: 100% !important;
     }
+
+    ._bthemasterfnt{
+      font-size: 2.5rem !important;
+    }
   }
 
   .contact-bttm-text{
@@ -576,6 +580,13 @@
     height: 30vh;
     margin-top: -158px;
   }
+
+  ._btheBckcolorlgreen {
+    background-color: #7EBDC2;
+    height: 30vh;
+    margin-top: -158px;
+  }
+
 
    
   ._btheBckcolorgr {

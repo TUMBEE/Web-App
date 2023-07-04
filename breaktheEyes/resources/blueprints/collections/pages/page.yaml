@@ -67,7 +67,6 @@ tabs:
               hide_display: false
               instructions: 'Note* Image must me 1794 × 1920 to maintain proper proportions in the frontend'
               max_files: 1
-              folder: static/uploads
           -
             handle: project_1_title
             field:
@@ -172,7 +171,7 @@ tabs:
         display: 'New Section'
         fields:
           -
-            handle: projeect_3_image
+            handle: project_3_image
             field:
               max_files: 1
               mode: grid

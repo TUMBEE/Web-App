@@ -1,14 +1,14 @@
 @extends('layouts.site')
+@section('page_title', 'Live Broadcasting')
 @section('content')
-
-<section class="page-header" style="background-image: url('assets/static/site-images/live-broadcasting-banner.jpg');">
+<section class="page-header" style="background-image: url('{{asset('assets/static/site-images/live-broadcasting-banner.jpg')}}');">
     <div class="container-xl">
       <div class="row">
         <div class="col-md-6">
           <h1 class="page-title">Live Broadcasting</h1>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb text-white">
-              <li class="breadcrumb-item"><a href="#" class="decoration-no text-white">Services</a></li>
+              <li class="breadcrumb-item"><a href="{{route('services')}}" class="decoration-no text-white">Services</a></li>
               <li class="breadcrumb-item text-white"><a href="#" class="decoration-no text-white">Live Broadcasting</a></li>
             </ol>
           </nav>
@@ -47,7 +47,7 @@
             
         </div>
         <div class="col-md-7">
-            <img src="{{asset('assets/static/site-images/live-recording-image.jpg')}}" class="img-fluid brd-15">
+            <img src="{{asset('assets/static/site-images/live-recording-banner.jpg')}}" class="img-fluid brd-15">
             
           </div>
               
@@ -72,14 +72,14 @@
         <h1 class="_bthe_page_title mt-5">We're good at</h1>
         <div class="row py-5">
             <div class="col-lg-3 col-md-3 col-sm-6 mb-3">
-                <div class="card b-0 b-10">
+                <div data-aos="fade-up"  data-aos-delay="300" class="card b-0 b-10">
                   <img src="{{asset('assets/static/site-images/multicamera-production.jpg')}}" class="card-img img-fluid" alt="Multi Camera Production">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h5 class="card-title text-white">Multi Camera Production</h5>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 mb-3">
+              <div data-aos="fade-up"  data-aos-delay="400" class="col-lg-3 col-md-3 col-sm-6 mb-3">
                 <div class="card b-0 b-10">
                   <img src="{{asset('assets/static/site-images/multi-camera-image.jpg')}}" class="card-img img-fluid" alt="Multi Camera Production">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -87,8 +87,8 @@
                   </div>
                 </div>
               </div>
-            <div class="col-md-3">
-                <div class="card b-0 b-10 mb-3" >
+            <div  class="col-md-3">
+                <div data-aos="fade-up"  data-aos-delay="500" class="card b-0 b-10 mb-3" >
                     <img src="{{asset('assets/static/site-images/hybrid-event-production.jpg')}}" class="card-img img-fluid" alt="Hybrid Event Production">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">Hybrid Event Production</h5>
@@ -96,7 +96,7 @@
                   </div>
             </div>
             <div class="col-md-3">
-                <div class="card b-0 b-10 mb-3" >
+                <div data-aos="fade-up"  data-aos-delay="600" class="card b-0 b-10 mb-3" >
                     <img src="{{asset('assets/static/site-images/live-streaming.jpg')}}" class="card-img img-fluid" alt="Background Image">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">Live Streaming</h5>

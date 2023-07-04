@@ -10,15 +10,15 @@
     <meta name="author" content="Romeo Tumbee">
     <meta property="og:title" content="@yield('page_title')">
     <meta property="og:description" content="@yield('page_description')">
-    <meta property="og:image" content="@yield('page_image')">
+    <meta property="og:image" content="{{asset('assets/static/brand/seo-banner.jpg')}}">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="@yield('page_image')">
+    <meta name="twitter:card" content="{{asset('assets/static/brand/seo-banner.jpg')}}">
     <meta name="twitter:title" content="@yield('page_title')">
     <meta name="twitter:description" content="@yield('page_description')">
-    <meta name="twitter:image" content="@yield('page_image')">
+    <meta name="twitter:image" content="{{asset('assets/static/brand/seo-banner.jpg')}}">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('/images/favicon.png') }} ">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/static/brand/favicon.png') }} ">
     <link href="{{asset('assets/css/app.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/bthe.css')}}" rel="stylesheet">
     <script src="{{asset('assets/js/app.js')}}"></script>

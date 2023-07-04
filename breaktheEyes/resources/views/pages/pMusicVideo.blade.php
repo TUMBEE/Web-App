@@ -1,5 +1,5 @@
 @extends('layouts.site')
-@section('page_title', $page->title)
+@section('page_title', $title)
 @section('content')
 <section class="page-header"  style="background-image: url('{{asset('assets/static/site-images/music-video-banner.jpg')}}');">
   <div class="container-xl">
@@ -8,7 +8,7 @@
         <h1 class="page-title text-white">Music Video</h1>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/#services" class="decoration-no text-white">Services</a></li>
+            <li class="breadcrumb-item"><a href="{{route('services')}}" class="decoration-no text-white">Services</a></li>
             <li class="breadcrumb-item"><a class="decoration-no text-white">Music Video</a></li>
           </ol>
         </nav>
@@ -79,25 +79,25 @@
       <div class="row">
           <div class="col-md-6 mb-3">
               <div class="ratio ratio-16x9">
-                  <iframe src="{{$page->video_1}}" title="YouTube video" allowfullscreen></iframe>
+                  <iframe src="{{$video_1}}" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="col-md-6 mb-3">
               <div class="ratio ratio-16x9">
-                  <iframe src="{{$page->video_2}}" title="YouTube video" allowfullscreen></iframe>
+                  <iframe src="{{$video_2}}" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="col-md-6 mb-3">
               <div class="ratio ratio-16x9">
-                  <iframe src="{{$page->video_3}}" title="YouTube video" allowfullscreen></iframe>
+                  <iframe src="{{$video_3}}" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="col-md-6 mb-3">
               <div class="ratio ratio-16x9">
-                  <iframe src="{{$page->video_4}}" title="YouTube video" allowfullscreen></iframe>
+                  <iframe src="{{$video_4}}" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
             

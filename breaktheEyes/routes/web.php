@@ -18,11 +18,15 @@ use App\Http\Controllers\webcontroller;
 //    'title' => 'Example'
 // ]);
 
-
-Route::get('/live-recording', [webcontroller::class, 'liveRecording'])->name('liveRecording');
+Route::get('/', [webcontroller::class, 'index'])->name('index');
+Route::get('services', [webcontroller::class, 'services'])->name('services');
+Route::get('services/live-recording', [webcontroller::class, 'liveRecording'])->name('liveRecording');
+Route::get('services/portrait-photography', [webcontroller::class, 'p_photography'])->name('p_photography');
+Route::get('services/fine-art-and-fashion', [webcontroller::class, 'fineArtandfashion'])->name('fineArtandfashion');
+Route::get('services/music-video', [webcontroller::class, 'musicVideo'])->name('musicVideo');
 Route::get('/about-us', [webcontroller::class, 'theTribe'])->name('theTribe');
-Route::get('/real-estate', [webcontroller::class, 'realEstate'])->name('realEstate');
-Route::get('/event-lifestyle', [webcontroller::class, 'eventLifestyle'])->name('eventLifestyle');
+Route::get('services/real-estate', [webcontroller::class, 'realEstate'])->name('realEstate');
+Route::get('services/event-lifestyle', [webcontroller::class, 'eventLifestyle'])->name('eventLifestyle');
 Route::get('/contact-us', [webcontroller::class, 'contactUs'])->name('contactUs');
 Route::post('/submit_form', [webcontroller::class, 'submitForm']);
 

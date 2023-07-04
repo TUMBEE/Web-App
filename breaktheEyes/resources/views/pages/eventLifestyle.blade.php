@@ -79,7 +79,7 @@
         <hr class="_btheblackline">
         <div class="row py-5">
             <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
-                <div class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="300" class="card b-0 b-10 mb-3">
                   <img src="{{asset('assets/static/site-images/individuak-portraits.jpg')}}" class="card-img img-fluid" alt="Documentary">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h5 class="card-title text-white">Documentary</h5>
@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
-                <div class="card b-0 b-10 mb-3">
+                <div data-aos="fade-up"  data-aos-delay="400" class="card b-0 b-10 mb-3">
                   <img src="{{asset('assets/static/site-images/familiy-portraits.jpg')}}" class="card-img img-fluid" alt="Sports">
                   <div class="card-img-overlay d-flex flex-column justify-content-end">
                     <h5 class="card-title text-white">Sports</h5>
@@ -95,7 +95,7 @@
                 </div>
               </div>
             <div class="col-md-3">
-                <div class="card b-0 b-10 mb-3 mb-4">
+                <div data-aos="fade-up"  data-aos-delay="500" class="card b-0 b-10 mb-3 mb-4">
                     <img src="{{asset('assets/static/site-images/couples-portraits.jpg')}}" class="card-img img-fluid" alt="Editorials">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">Editorials</h5>
@@ -103,7 +103,7 @@
                   </div>
             </div>
             <div class="col-md-3">
-                <div class="card b-0 b-10 mb-3 mb-4">
+                <div data-aos="fade-up"  data-aos-delay="600" class="card b-0 b-10 mb-3 mb-4">
                     <img src="{{asset('assets/static/site-images/lifestyle-portraits.jpg')}}" class="card-img img-fluid" alt="B2B Videography">
                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                       <h5 class="card-title text-white">B2B Videography</h5>
@@ -113,8 +113,7 @@
         </div>
     </div>
     </section>
-
-
+    <section class="_btheBckcolorlgreen"></section>
 
 @include('partials.startSmth')
 
